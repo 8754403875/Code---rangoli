@@ -1,0 +1,14 @@
+
+n = int(input()) if n==1: print('a') sys.exit(0) 
+for i in range(n): 
+sys.stdout.write('-'*(2*(n-i-1))) for j in range(0, i+1): 
+sys.stdout.write(chr(97+n-1-j)+'-') for j in range(i-1, -1, -1): if i==n-1 and j==0:
+sys.stdout.write(chr(97+n-1-j)) else: 
+sys.stdout.write(chr(97+n-1-j)+'-') if i==n-1:
+ sys.stdout.write('\n') None else: 
+sys.stdout.write('-'*(2*(n-i-1)-1)+'\n') for i in range(n-2, -1, -1):
+ sys.stdout.write('-'*(2*(n-i-1))) for j in range(0, i+1): 
+sys.stdout.write(chr(97+n-1-j)+'-') for j in range(i-1, -1, -1): if i==0: 
+sys.stdout.write(chr(97+n-1-j)) else:
+ sys.stdout.write(chr(97+n-1-j)+'-')
+ sys.stdout.write('-'*(2*(n-i-1)-1)+'\n')
